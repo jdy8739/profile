@@ -1,3 +1,5 @@
+import { content, selfIntroContent } from "./selfIntro.js";
+
 interface IData {
     [key: number]: string
 }
@@ -21,5 +23,6 @@ const toggleTargets = document.getElementsByClassName('toggle-target');
 toggleButton.addEventListener('click', () => {
     const targetLang = isKorean ? english : korean;
     Array.from(toggleTargets).forEach((target, index) => target.textContent = targetLang[index]);
+    if (selfIntroContent) selfIntroContent.textContent = isKorean ? content['english'] : content['korean'];
     isKorean = !isKorean;
 });

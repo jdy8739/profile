@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css"/>
 </head>
 <body>
   <div id="top" class="text-right m-4">
@@ -19,7 +20,14 @@
   <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
       <div>
-        <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="Workflow">
+        <div class="flip-box">
+          <div class="front border-4 border-indigo-500">
+            <img src="./profile/avatar.jpg"/>
+          </div>
+          <div class="back border-4 border-indigo-500">
+            <img src="./profile/avatar.jpg"/>
+          </div>
+        </div>
         <h2 class="mt-6 text-center text-3xl tracking-tight font-bold text-gray-900">정도영</h2>
         <p class="mt-3 font-medium text-center text-indigo-600 hover:text-indigo-500">1995 . 01 . 23</p>
       </div>
@@ -146,6 +154,10 @@
         <div class="text-center text-white font-bold cursor-pointer self-intro">SELF INTRODUCTION</div>
       </div>
     </div>
+    <div class="mt-12">
+      <div class="shadow sm:rounded-md sm:overflow-hidden px-4 py-5 bg-white space-y-6 sm:p-6 self-intro-content">
+      </div>
+    </div>
   </div>
   <div class="mt-20">
     <div class="w-3/5 mx-auto">
@@ -190,36 +202,8 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="./scripts/langToggle.js"></script>
-  <script src="./scripts/selfIntro.js"></script>
-  <script src="./scripts/clock.js"></script>
+  <script type="module" src="./scripts/langToggle.js"></script>
+  <script type="module" src="./scripts/selfIntro.js"></script>
+  <script type="module" src="./scripts/clock.js"></script>
 </body>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap');
-  h1, h2, h3, h4, h5, h6, p, span, div {
-    font-family: 'Noto Serif KR', serif;
-  }
-  .background-pic {
-    background-position: bottom center;
-    background-size: cover;
-  }
-  #marvel-app-bg {
-    background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/marvel-app-bg.PNG);
-  }
-  #blog-app-bg {
-    background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/blog-app-bg.PNG);
-  }
-  #chato-bg {
-    background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/chato-bg.PNG);
-  }
-  button:hover {
-    color: white;
-  }
-  .intro-content {
-    transition: all 1s;
-  }
-  .hide {
-    display: none;
-  }
-</style>
 </html>

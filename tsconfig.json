@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2017",
-        "module": "commonjs",
+        "module": "es2015",
         "noImplicitAny": false,
         "strictNullChecks": true,
         "removeComments": true, //컴파일시 주석제거 
@@ -16,5 +16,6 @@
         "noUnusedParameters": true, //쓰지않는 파라미터 있으면 에러내기
         "noImplicitReturns": false, //함수에서 return 빼먹으면 에러내기 
         "noFallthroughCasesInSwitch": true, //switch문 이상하면 에러내기 
+        "esModuleInterop": true,
     }
 }
