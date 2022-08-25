@@ -1,4 +1,5 @@
 import { content, selfIntroContent } from "./selfIntro.js";
+;
 let korean;
 let english;
 let isKorean = false;

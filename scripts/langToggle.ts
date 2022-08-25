@@ -1,8 +1,6 @@
 import { content, selfIntroContent } from "./selfIntro.js";
 
-interface IData {
-    [key: number]: string
-}
+interface IData { [key: number]: string; };
 
 let korean: IData;
 let english: IData;

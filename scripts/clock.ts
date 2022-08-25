@@ -9,7 +9,7 @@ const getNowTime = () => {
     const hour = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const sec = String(now.getSeconds()).padStart(2, '0');
-    return `${year }/ ${month + 1} / ${date} - ${hour} : ${minutes} : ${sec}`;
+    return `${year} / ${month + 1} / ${date} - ${hour} : ${minutes} : ${sec}`;
 }
 
 setInterval(() => {

@@ -4,11 +4,9 @@ interface IContent {
     korean: string 
 }
 const selfIntroBox = document.querySelector('.intro-box');
-
 const selfIntroBar = document.querySelector('.self-intro');
 
 export let selfIntroContent: Element | null;
-
 export let content: IContent;
 
 if (selfIntroBox) selfIntroContent = selfIntroBox.querySelector('.self-intro-content');
