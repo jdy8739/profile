@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap');
 h1, h2, h3, h4, h5, h6, p, span, div {
-font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Serif KR', serif;
 }
 .background-pic {
-background-position: bottom center;
-background-size: cover;
+    background-position: bottom center;
+    background-size: cover;
 }
+
+.background-pic .toggle-target {
+    transition: all 1s;
+}
+
+.background-pic:hover .toggle-target {
+    text-shadow: 5px 5px 5px black;
+}
+
 #marvel-app-bg {
 background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/marvel-app-bg.PNG);
 }

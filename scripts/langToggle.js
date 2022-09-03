@@ -1,4 +1,4 @@
-import { content, selfIntroContent } from "./selfIntro.js";
+"use strict";
 ;
 let korean;
 let english;
@@ -8,13 +8,13 @@ $.ajax({
 }).done((res) => {
     korean = res.korean;
     english = res.english;
+    toggleLanguage();
 });
 const toggleButton = document.getElementsByClassName('toggle')[0];
 const toggleTargets = document.getElementsByClassName('toggle-target');
-toggleButton.addEventListener('click', () => {
+const toggleLanguage = () => {
     const targetLang = isKorean ? english : korean;
     Array.from(toggleTargets).forEach((target, index) => target.textContent = targetLang[index]);
-    if (selfIntroContent)
-        selfIntroContent.textContent = isKorean ? content['english'] : content['korean'];
     isKorean = !isKorean;
-});
+};
+toggleButton.addEventListener('click', toggleLanguage);
