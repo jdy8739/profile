@@ -27,19 +27,16 @@ $.ajax({
             const isLastIndex = (i + 1 === len);
             makeIntroContent(Object.assign(Object.assign({}, res.korean[i]), { isLastIndex }));
         }
-        selfIntroContent.classList.add('hide', 'intro-content');
+        selfIntroContent.classList.add('intro-content');
+        showSelfIntro();
+        isIntroShown = true;
     }
 });
 let isIntroShown = false;
 selfIntroBar === null || selfIntroBar === void 0 ? void 0 : selfIntroBar.addEventListener('click', () => {
     if (selfIntroContent) {
-        if (!isIntroShown) {
-            selfIntroContent.classList.remove('hide', 'slide-up');
-            selfIntroContent.classList.add('slide-down');
-            setTimeout(() => {
-                selfIntroContent && selfIntroContent.classList.remove('intro-content');
-            }, 578);
-        }
+        if (!isIntroShown)
+            showSelfIntro();
         else {
             selfIntroContent.classList.remove('slide-down');
             selfIntroContent.classList.add('slide-up');
@@ -50,3 +47,12 @@ selfIntroBar === null || selfIntroBar === void 0 ? void 0 : selfIntroBar.addEven
         isIntroShown = !isIntroShown;
     }
 });
+const showSelfIntro = () => {
+    if (selfIntroContent) {
+        selfIntroContent.classList.remove('hide', 'slide-up');
+        selfIntroContent.classList.add('slide-down');
+        setTimeout(() => {
+            selfIntroContent && selfIntroContent.classList.remove('intro-content');
+        }, 578);
+    }
+};
