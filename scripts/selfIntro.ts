@@ -39,7 +39,6 @@ $.ajax({
             const isLastIndex = (i + 1 === len);
             makeIntroContent({...res.korean[i], isLastIndex});
         }
-        selfIntroContent.classList.add('intro-content');
         showSelfIntro();
         isIntroShown = true;
     }
@@ -54,7 +53,7 @@ selfIntroBar?.addEventListener('click', () => {
             selfIntroContent.classList.remove('slide-down');
             selfIntroContent.classList.add('slide-up');
             setTimeout(() => {
-                selfIntroContent && selfIntroContent.classList.add('hide', 'intro-content');
+                selfIntroContent && selfIntroContent.classList.add('hide');
             }, 580);
         }
         isIntroShown = !isIntroShown;
@@ -65,8 +64,5 @@ const showSelfIntro = () => {
     if (selfIntroContent) {
         selfIntroContent.classList.remove('hide', 'slide-up');
         selfIntroContent.classList.add('slide-down');
-        setTimeout(() => {
-            selfIntroContent && selfIntroContent.classList.remove('intro-content');
-        }, 578);
     }
 }

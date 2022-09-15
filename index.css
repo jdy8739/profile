@@ -16,50 +16,46 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 }
 
 #marvel-app-bg {
-background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/marvel-app-bg.PNG);
+    background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/marvel-app-bg.PNG);
 }
 #blog-app-bg {
-background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/blog-app-bg.PNG);
+    background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/blog-app-bg.PNG);
 }
 #chato-bg {
-background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/chato-bg.PNG);
+    background-image: linear-gradient(to top, rgb(143, 142, 163), transparent), url(./bgs/chato-bg.PNG);
 }
 button:hover {
-color: white;
-}
-.intro-content {
-margin-top: -20px;
+    color: white;
 }
 .hide {
-display: none;
+    display: none;
 }
 .slide-down {
-animation-name: slidedown;
-animation-duration: 0.6s;
+    animation-name: slidedown;
+    animation-duration: 0.6s;
 }
 @keyframes slidedown {
-0% {
-    opacity: 0.0;
-}
-100% {
-    opacity: 1.0;
-    transform: translateY(20px);
-}
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+        transform: translateY(0px);
+    }
 }
 .slide-up {
-animation-name: slideup;
-animation-duration: 0.6s;
+    animation-name: slideup;
+    animation-duration: 0.6s;
 }
 @keyframes slideup {
-0% {
-    opacity: 1.0;
+    0% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.0;
+        transform: translateY(-20px);
+    }
 }
-100% {
-    opacity: 0.0;
-    transform: translateY(-20px);
-}
-}
-
 .flip-box {
     width: 200px;
     height: 200px;
@@ -68,11 +64,9 @@ animation-duration: 0.6s;
     transform-style: preserve-3d;
     transition: all 1s;
 }
-
 .flip-box:hover {
     transform: rotateY(180deg);
 }
-
 .front {
     position: absolute;
     background-color: indigo;
@@ -83,7 +77,6 @@ animation-duration: 0.6s;
     z-index : 1;
     overflow: hidden;
 }
-
 .back {
     position: absolute;
     background-color: red;
@@ -91,4 +84,10 @@ animation-duration: 0.6s;
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
+}
+.skill-icon {
+    transition: all 1s;
+}
+.skill-icon:hover {
+    scale: 1.1;
 }
